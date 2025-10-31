@@ -1,7 +1,7 @@
 // src/app/page.tsx  (or any component)
 'use client';
 
-import { Button } from '@/components/ui/button';
+// import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { PlayCircle } from 'lucide-react';
 import BannerImage from '../../../assets/images/banner.png';
@@ -11,7 +11,7 @@ import BgImage from '@/assets/images/bg.png';
 export default function HeroSection() {
   return (
 
-    <section className="relative bg-cover bg-center bg-no-repeat py-16 lg:py-24 rounded-b-3xl overflow-hidden"
+    <section className="relative bg-cover bg-center bg-no-repeat py-16 rounded-b-3xl overflow-hidden"
       style={{
         backgroundImage:
           `url(${BgImage})`,
@@ -20,11 +20,11 @@ export default function HeroSection() {
       {/* subtle overlay for depth */}
       <div className="absolute inset-0  via-transparent to-accent/5" />
 
-      <div className="relative container mx-auto px-6 py-8 lg:py-16 flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+      <div className="relative container mx-auto px-6 py-8 lg:py-16 flex flex-col lg:flex-row items-center gap-12 lg:gap-4">
         {/* LEFT – TEXT */}
 
         <div className="relative z-0 flex-1 flex justify-center">
-          <div className="relative ml-30 w-full max-w-md">
+          <div className="relative ml-30 w-full max-w-md xl:max-w-3xl">
             <img
               src={BannerImage}              // replace with your image
               alt="Fit man holding a dumbbell"
@@ -62,20 +62,6 @@ export default function HeroSection() {
           <h1 className="md:text-[99px] text-4xl lg:text-6xl xl:text-7xl font-bold text-foreground  text-right leading-tight">
             CREATING BRANDS <br></br> THAT CONNECT <br /> AND INSPIRE
           </h1>
-
-          <p className="text-lg text-muted-foreground z-10 max-w-2xl">
-            A huge selection of health and fitness content, healthy recipes and transformation
-            stories to help you get fit and stay fit!
-          </p>
-
-          <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-            <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold">
-              Join Club Now!
-            </Button>
-            <Button size="lg" variant="outline">
-              Download App
-            </Button>
-          </div>
         </div>
       </div>
     </section>
