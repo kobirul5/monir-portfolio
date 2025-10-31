@@ -11,35 +11,34 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover"
-import { ModeToggle } from "./ModeToggler"
+// import { ModeToggle } from "./ModeToggler"
 import Logo from "@/assets/icons/Logo"
 import { Link } from "react-router"
-import {  authApi, useLogoutMutation, useUserInfoQuery } from "@/redux/features/auth/auth.api"
-import { useAppDispatch } from "@/redux/hook"
-
+// import {  authApi, useLogoutMutation, useUserInfoQuery } from "@/redux/features/auth/auth.api"
+// import { useAppDispatch } from "@/redux/hook"
+// 
 // Navigation links array to be used in both desktop and mobile menus
 const navigationLinks = [
-  { href: "/", label: "Home", active: true },
-  { href: "/about", label: "About" },
-  { href: "#", label: "Pricing" },
-  { href: "#", label: "About" },
+  { href: "/", label: "About Me", active: true },
+  { href: "/about", label: "Work" },
+  { href: "#", label: "Contact" }
 ]
 
 export default function Navbar() {
-  const { data } = useUserInfoQuery(undefined)
-  const [logout] = useLogoutMutation()
-  const dispatch = useAppDispatch()
+  // const { data } = useUserInfoQuery(undefined)
+  // const [logout] = useLogoutMutation()
+  // const dispatch = useAppDispatch()
 
 
-  const handleLogout = () => {
-    logout(undefined)
-    localStorage.removeItem("token")
-    dispatch(authApi.util.resetApiState())
-  }
+  // const handleLogout = () => {
+  //   logout(undefined)
+  //   localStorage.removeItem("token")
+  //   dispatch(authApi.util.resetApiState())
+  // }
 
 
   return (
-    <header className="border-b">
+    <header className="border-b fixed w-full bg-transparent  top-0 z-50 backdrop-blur-sm">
       <div className="container px-4 mx-auto flex h-16 items-center justify-between gap-4">
         {/* Left side */}
         <div className="flex items-center gap-2">
@@ -102,7 +101,12 @@ export default function Navbar() {
               <Logo />
             </a>
             {/* Navigation menu */}
-            <NavigationMenu className="max-md:hidden">
+           
+          </div>
+        </div>
+        {/* Right side */}
+        <div className="flex items-center gap-2">
+           <NavigationMenu className="max-md:hidden">
               <NavigationMenuList className="gap-2">
                 {navigationLinks.map((link, index) => (
                   <NavigationMenuItem key={index}>
@@ -118,20 +122,10 @@ export default function Navbar() {
                 ))}
               </NavigationMenuList>
             </NavigationMenu>
-          </div>
-        </div>
-        {/* Right side */}
-        <div className="flex items-center gap-2">
-          <ModeToggle />
-          {
-            data?.data?.email &&
-            <Button onClick={handleLogout}>Logout</Button>}
-          {
-            !data?.data?.email &&
             <Button asChild className="text-sm">
-              <Link to={"/login"}>Login</Link>
+              <Link to="/login">Download CV</Link>
             </Button>
-          }
+          {/* <ModeToggle /> */}
 
         </div>
       </div>
