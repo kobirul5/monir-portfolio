@@ -6,7 +6,7 @@ import Img3 from '../../../assets/images/about/m3.png';
 
 export default function AboutMe() {
   return (
-    <section className="bg-background  pb-16 px-6 container mx-auto">
+    <section className="  pb-16 px-6 container mx-auto">
       {/* Header */}
       <div className="max-w-6xl mx-auto text-center mb-12">
         <h2 className="text-4xl font-bold  mb-2">About Me</h2>

@@ -6,8 +6,8 @@ import { ArrowRight } from "lucide-react";
 export default function Footer() {
   return (
     <footer
-      className="relative bg-cover bg-center bg-no-repeat rounded-b-3xl overflow-hidden text-foreground"
-      // className="relative bg-cover bg-center bg-no-repeat py-16 rounded-b-3xl overflow-hidden"
+      // className="relative  rounded-b-3xl overflow-hidden text-foreground"
+      className="relative bg-cover bg-center bg-no-repeat py-16 rounded-b-3xl overflow-hidden"
       style={{
         backgroundImage:
           `url(${FotterImg})`,

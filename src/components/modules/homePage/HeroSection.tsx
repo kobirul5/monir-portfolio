@@ -5,22 +5,22 @@
 import { Badge } from '@/components/ui/badge';
 import { PlayCircle } from 'lucide-react';
 import BannerImage from '../../../assets/images/banner.png';
-import BgImage from '@/assets/images/bg.png';
+// import BgImage from '@/assets/images/bg.png';
 // import Shadow from '@/assets/images/shodow.png';
 
 export default function HeroSection() {
   return (
 
-    <section className="relative bg-cover bg-center bg-no-repeat py-16 rounded-b-3xl overflow-hidden"
-      style={{
-        backgroundImage:
-          `url(${BgImage})`,
-      }}
+    <section className="relative bg-cover bg-center bg-no-repeat pb-8 rounded-b-3xl overflow-hidden"
+      // style={{
+      //   backgroundImage:
+      //     `url(${BgImage})`,
+      // }}
     >
       {/* subtle overlay for depth */}
       <div className="absolute inset-0  via-transparent to-accent/5" />
 
-      <div className="relative container mx-auto px-6 py-8 lg:py-16 flex flex-col lg:flex-row items-center gap-12 lg:gap-4">
+      <div className="relative container mx-auto px-6 py-b lg:pb-16 flex flex-col lg:flex-row items-center gap-12 lg:gap-4">
         {/* LEFT – TEXT */}
 
         <div className="relative z-0 flex-1 flex justify-center">
