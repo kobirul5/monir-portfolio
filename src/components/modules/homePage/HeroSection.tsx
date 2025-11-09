@@ -11,7 +11,7 @@ import BannerImage from '../../../assets/images/banner.png';
 export default function HeroSection() {
   return (
 
-    <section className="relative bg-cover bg-center bg-no-repeat pb-8 rounded-b-3xl overflow-hidden"
+    <section className="relative bg-cover bg-center bg-no-repeat pb-8 rounded-b-3xl overflow-hidden pt-20"
       // style={{
       //   backgroundImage:
       //     `url(${BgImage})`,
@@ -19,6 +19,7 @@ export default function HeroSection() {
     >
       {/* subtle overlay for depth */}
       <div className="absolute inset-0  via-transparent to-accent/5" />
+
 
       <div className="relative container mx-auto px-6 py-b lg:pb-16 flex flex-col lg:flex-row items-center gap-12 lg:gap-4">
         {/* LEFT – TEXT */}
